@@ -11,6 +11,12 @@ sans-serif;
     box-sizing: border-box;
 }
 
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -59,6 +65,48 @@ header {
     font-size: 20px;
     font-weight: normal;
   }
+
+  .navbar {
+      background-color: black;
+      font-family: "Saira";
+      padding: 10px 0 10px 50px;
+
+  }
+
+  .navbar ul {
+      list-style: none;
+  }
+
+
+  .navbar ul li {
+    float: left;
+    width: 15%;
+    margin: 0 10px;
+
+  }
+
+  .navbar ul li a {
+      display: block;
+      /* padding: 10px 30px; */
+      border: 2px solid white;
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      transition: all 0.2s ease-out;
+
+  }
+
+  .navbar ul li a:hover {
+    background-color: grey;
+    /* color: black;
+    border-color:grey; */
+  }
+
+  /* DESCRIPTION */
+
+
 
 
 
