@@ -106,6 +106,39 @@ header {
 
   /* DESCRIPTION */
 
+  .description {
+      height: 300px;
+
+
+
+  }
+
+  .dc h1 {
+      margin: 20px 0;
+      text-transform: uppercase;
+      font-family: "Saira";
+  }
+
+  .dc p {
+      float: left;
+      margin-left: 30px;
+      text-align: justify;
+  }
+
+  .dc img {
+    float: left;
+}
+
+  footer {
+      font-family: "Saira";
+      font-size: 20px;
+      background-color: #444;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 40px;
+  }
+
 
 
 
