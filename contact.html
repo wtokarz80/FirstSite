@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="stylescontact.css">
 </head>
 
-<body>
+<body onload="document.form1.username.focus()">
     <div id="content">
-        <p>Contact:</p>
-        <form action="" method="GET">
-            <p>Text: <input type="text" name="name" placeholder="Enter your name" size="30" maxlength="25" required>
+        <h1>Contact:</h1>
+        <form name="form1" onkeyup="required()">
+            <p>Text: <input class='input' id="username" type="text" name="username" placeholder="Enter your name" size="30" maxlength="25" required>
             </p>
-            <p>Email: <input type="email" name="email" placeholder="Enter your email" size="30" maxlength="25" required></p>
+            <p>Email: <input class='input' id="useremail" type="email" name="email" placeholder="Enter your email" size="30" maxlength="25" required></p>
 
             <p>
-                <textarea name="textarea" id="" cols="40" rows="10" placeholder="Write a message">Some text</textarea>
+                <textarea class='input' id="textarea" name="textarea" cols="40" rows="10" placeholder="Write a message"></textarea>
             </p>
             <p>
-                <input type="submit" value="SEND">
+                <input id="submit" type="submit" value="SEND" onclick="validateInputs(document.form1.username, document.form1.email, document.form1.textarea)" disabled="true">
                 <input type="reset" value="RESTART">
 
             </p>
@@ -27,7 +28,7 @@
         </form>
 
     </div>
-
+    <script src="contact.js"></script>
 </body>
 
 </html>
