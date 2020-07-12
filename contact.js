@@ -31,8 +31,10 @@ function required() {
     let textarea = document.forms["form1"]["textarea"].value;
     if (!username == "" && !email == "" && !textarea == "") {
         document.getElementById("submit").disabled = false;
+        
     } else {
         document.getElementById("submit").disabled = true;
+        
     }
 
 }

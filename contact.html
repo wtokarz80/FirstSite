@@ -10,22 +10,35 @@
 
 <body onload="document.form1.username.focus()">
     <div id="content">
-        <h1>Contact:</h1>
+        <header><h1>Contact me</h1></header>
         <form name="form1" onkeyup="required()">
-            <p>Text: <input class='input' id="username" type="text" name="username" placeholder="Enter your name" size="30" maxlength="25" required>
-            </p>
-            <p>Email: <input class='input' id="useremail" type="email" name="email" placeholder="Enter your email" size="30" maxlength="25" required></p>
+            <p>User Name: <input class='input' id="username" type="text" name="username" placeholder="Enter your name"
+                    size="30" maxlength="25" required>
+            </p><br>
+            <p id="errorName"></p>
+            <p>Email: <input class='input' id="useremail" type="email" name="email" placeholder="Enter your email"
+                    size="30" maxlength="25" required></p><br>
+                    <p id="errorEmail"></p>
 
-            <p>
-                <textarea class='input' id="textarea" name="textarea" cols="40" rows="10" placeholder="Write a message"></textarea>
-            </p>
-            <p>
-                <input id="submit" type="submit" value="SEND" onclick="validateInputs(document.form1.username, document.form1.email, document.form1.textarea)" disabled="true">
+            <p>Message: <textarea class='input' id="textarea" name="textarea" cols="40" rows="10"
+                    placeholder="Write a message"></textarea>
+            </p><br>
+            <p id="errorMessage"></p>
+            <div class="buttons">
+                <input id="submit" type="submit" value="SEND"
+                    onclick="validateInputs(document.form1.username, document.form1.email, document.form1.textarea)"
+                    disabled>
                 <input type="reset" value="RESTART">
 
-            </p>
+            </div>
 
         </form>
+        <footer id="footer">
+            <p><img src="images/contact1.png" alt=""><span>Email</span></p>
+            <p><img src="images/contact2.png" alt=""><span>Phone</span></p>
+            <p><img src="images/contact3.png" alt=""><span>Facebook</span></p>
+
+            </footer>
 
     </div>
     <script src="contact.js"></script>

@@ -11,6 +11,10 @@ sans-serif;
     box-sizing: border-box;
 }
 
+body {
+  height: 100%;
+}
+
 
 .clearfix::after {
     content: "";
@@ -18,10 +22,15 @@ sans-serif;
     clear: both;
 }
 
+
+
 .container {
     max-width: 1200px;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -47,20 +56,21 @@ header {
     z-index: 1;
     top: 5%;
     left: 15%;
-    /* right: 5%; */
     font-family: 'Saira Condensed',
       sans-serif;
     color: white;
-    font-size: 80px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
   }
+
+  .welcome p {
+    font-size: 5em;
+  }
   
   
-  header h1 {
-    margin-top: 0px;
-    font-size: 40px;
+  .welcome h1 {
+    margin-top: 0;
   }
   
 
@@ -85,7 +95,6 @@ header {
 
   .navbar ul li a {
       display: block;
-      /* padding: 10px 30px; */
       border: 2px solid white;
       font-size: 20px;
       color: white;
@@ -98,8 +107,6 @@ header {
 
   .navbar ul li a:hover {
     background-color: grey;
-    /* color: black;
-    border-color:grey; */
   }
 
   /* DESCRIPTION */
@@ -123,12 +130,14 @@ header {
     padding: 0 20px 0 20px;
   }
 
-  .dc {
+  .description > div {
     height: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+    
   }
 
   /* HOBBY */
@@ -142,7 +151,7 @@ header {
 
   }
 
-  .item1, .item2, .item3 {
+  .items > div {
     height: 100%;
     width: 30%;
     display: flex;
@@ -157,12 +166,12 @@ header {
 
   }
 
-  .item1 {
+  #item1 {
     background-image: url(images/hobby1.jpg);
   }
-  .item2 {
+  #item2 {
     background-image: url(images/hobby3.jpg);
-  }.item3 {
+  }#item3 {
     background-image: url(images/hobby2.jpg);
   }
 
@@ -176,9 +185,7 @@ header {
     font-family: 'saira', sans-serif;
     color: white;
     text-align: center;
-    /*  line-height: 25vh;*/
     text-shadow: 0 0 4px black;
-    /* background-color: rgba(0, 0, 0, .5); */
     font-size: 30px;
     padding: 5px 0;
     transition: 1s;
@@ -186,11 +193,11 @@ header {
     opacity: 0;
   }
 
-  .item1:hover p, .item2:hover p, .item3:hover p {
+  #item1:hover p, #item2:hover p, #item3:hover p {
     opacity: 1;
   }
 
-  .hobby .item1:hover, .item2:hover, .item3:hover {
+  #item1:hover, #item2:hover, #item3:hover {
     background-size: 180%;
   }
 
